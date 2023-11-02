@@ -2,9 +2,6 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const productSchema = new Schema({
-    _id: {
-        type: String,
-    },
     name: {
         type: String,
     },
