@@ -20,7 +20,7 @@ const ProductList = () => {
 
   return (
     <div className='container'>
-      <h2>Lista de Productos</h2>
+      <h2>Lista de Usuarios</h2>
       {products.map((product) => (
         <div key={product._id}>
           <h3>{product.name}</h3>

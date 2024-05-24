@@ -56,9 +56,9 @@ const ProductPatch = () => {
   return (
     <div>
       <label>
-        Seleccione un producto:
+        Seleccione un usuario:
         <select onChange={handleSeleccionarProducto}>
-          <option value="">Seleccione un producto</option>
+          <option value="">Seleccione un usuario</option>
           {productos.map(producto => (
             <option key={producto._id} value={producto._id}>
               {producto.name}
@@ -78,7 +78,7 @@ const ProductPatch = () => {
             />
           </label>
           <label>
-            Precio:
+            Rol:
             <input
               type="number"
               value={precio}
@@ -86,14 +86,14 @@ const ProductPatch = () => {
             />
           </label>
           <label>
-            Moneda:
+            Correo:
             <input
               type="text"
               value={moneda}
               onChange={event => setMoneda(event.target.value)}
             />
           </label>
-          <button onClick={handleActualizarProducto}>Actualizar Producto</button>
+          <button onClick={handleActualizarProducto}>Actualizar Usuario</button>
         </div>
       )}
     </div>
