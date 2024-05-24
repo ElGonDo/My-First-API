@@ -1,9 +1,9 @@
 import Footer from './components/Footer';
 import Header from './components/Header';
-import ProductList from './components/Product';
-import ProductDelete from './components/ProductDelete';
-import ProductPost from './components/ProductPost';
-import ProductPatch from './components/ProductPatch';
+import UsersList from './components/User';
+import UserDelete from './components/UserDelete';
+import UserPost from './components/UserPost';
+import UserPatch from './components/UserPatch';
 import './styles/App.css';
 
 function App() {
@@ -11,10 +11,10 @@ function App() {
     <div className='container-main'>
       <Header />
       <div className="content">
-        <ProductList/>
-        <ProductPost/>
-        <ProductDelete/>
-        <ProductPatch/>
+        <UsersList />
+        <UserPost />
+        <UserDelete />
+        <UserPatch />
       </div>
       <Footer />
     </div>

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './styles/ProductSyle.css';
 
-const ProductDelete = () => {
-  const [usuarios, setUsuarios] = useState([]);
+const UserDelete = () => {
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8081/productos')
+    fetch('http://localhost:4041/usuarios')
       .then(response => response.json())
-      .then(data => setUsuarios(data))
-      .catch(error => console.error('Error al cargar los productos:', error));
+      .then(data => setUsers(data))
+      .catch(error => console.error('Error al cargar los usuarios:', error));
   }, []);
 
-  const handleBorrarProducto = () => {
+  const handleBorrarUser = () => {
     const usuarioId = document.querySelector('select').value;
 
-    fetch(`http://localhost:8081/productos/${usuarioId}`, {
+    fetch(`http://localhost:4041/usuarios/${usuarioId}`, {
       method: 'DELETE'
     })
       .then(response => {
@@ -35,16 +35,16 @@ const ProductDelete = () => {
       <label>
         Seleccione un usuario:
         <select>
-          {usuarios.map(producto => (
-            <option key={producto._id} value={producto._id}>
-              {producto.name}
+          {users.map(user => (
+            <option key={user._id} value={user._id}>
+              {user.name}
             </option>
           ))}
         </select>
       </label>
-      <button onClick={handleBorrarProducto}>Eliminar</button>
+      <button onClick={handleBorrarUser}>Eliminar</button>
     </div>
   );
 };
 
-export default ProductDelete;
+export default UserDelete;

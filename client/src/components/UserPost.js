@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './styles/ProductSyle.css';
 
-function ProductPost() {
+function UserPost() {
   const [nombre, setNombre] = useState('');
   const [rol, setRol] = useState('');
   const [correo, setCorreo] = useState('');
@@ -11,13 +11,13 @@ function ProductPost() {
 
     // Crear el objeto de datos del producto
     const data = {
-        name: nombre,
-        role: rol,
-        contact_email: correo
+      name: nombre,
+      role: rol,
+      contact_email: correo
     };
 
     // Enviar la solicitud POST
-    fetch('http://localhost:8081/productos', {
+    fetch('http://localhost:4041/usuarios', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -76,4 +76,4 @@ function ProductPost() {
   );
 }
 
-export default ProductPost;
+export default UserPost;
