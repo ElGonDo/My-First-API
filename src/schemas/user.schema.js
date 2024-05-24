@@ -1,15 +1,15 @@
 import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
-const productSchema = new Schema({
+const userSchema = new Schema({
     name: {
         type: String,
     },
-    price: {
-        type: Number,
+    role: {
+        type: String,
     },
       
-    currency: {
+    contact_email: {
       type: String,
     },
 },
@@ -17,6 +17,6 @@ const productSchema = new Schema({
     timestamps: true,
 });
 
-const productModel = model('productos', productSchema);
+const userModel = model('usuarios', userSchema);
 
-export default productModel;
+export default userModel;

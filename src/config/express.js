@@ -1,4 +1,4 @@
-import productRouter from '#Routes/product.routes.js';
+import userRouter from '#Routes/user.routes.js';
 import cors from 'cors';
 import express from 'express';
 
@@ -10,6 +10,6 @@ expressApp.use(express.json());
 expressApp.use(cors());
 
 // Routes
-expressApp.use('/productos', productRouter);
+expressApp.use('/usuarios', userRouter);
 
 export default expressApp;
