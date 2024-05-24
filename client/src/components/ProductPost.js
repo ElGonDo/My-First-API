@@ -3,8 +3,8 @@ import './styles/ProductSyle.css';
 
 function ProductPost() {
   const [nombre, setNombre] = useState('');
-  const [precio, setPrecio] = useState('');
-  const [moneda, setMoneda] = useState('');
+  const [rol, setRol] = useState('');
+  const [correo, setCorreo] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,8 +12,8 @@ function ProductPost() {
     // Crear el objeto de datos del producto
     const data = {
         name: nombre,
-        price: precio,
-        currency: moneda
+        role: rol,
+        contact_email: correo
     };
 
     // Enviar la solicitud POST
@@ -26,22 +26,22 @@ function ProductPost() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Producto creado:', data);
+        console.log('Usuario creado:', data);
         // Actualizar el estado o hacer cualquier otra acción necesaria
       })
       .catch(error => {
-        console.error('Error al crear el producto:', error);
+        console.error('Error al crear el usuario:', error);
       });
 
     // Limpiar los campos después de enviar la solicitud
     setNombre('');
-    setPrecio('');
-    setMoneda('');
+    setRol('');
+    setCorreo('');
   };
 
   return (
     <div className='container'>
-      <h1>Agregar Producto</h1>
+      <h1>Registar Usuario</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Nombre:
@@ -53,24 +53,24 @@ function ProductPost() {
         </label>
         <br />
         <label>
-          Precio:
+          Rol:
           <input
             type="text"
-            value={precio}
-            onChange={e => setPrecio(e.target.value)}
+            value={rol}
+            onChange={e => setRol(e.target.value)}
           />
         </label>
         <br />
         <label>
-          Moneda:
+          Correo:
           <input
-            type="text"
-            value={moneda}
-            onChange={e => setMoneda(e.target.value)}
+            type="email"
+            value={correo}
+            onChange={e => setCorreo(e.target.value)}
           />
         </label>
         <br />
-        <button type="submit">Crear Producto</button>
+        <button type="submit">Registrar usuario</button>
       </form>
     </div>
   );
