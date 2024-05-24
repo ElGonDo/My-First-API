@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
 .container {
     margin-right: 10em;
 }
 
-h1 {
+.title {
     font-family: Arial Black;
-    font-size: 22px;
+    font-size: 25px;
     color: orange;
     text-shadow: -1px 0 #606f92, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
-
 }
 
 button {
@@ -29,5 +30,26 @@ input {
 
 label {
     font-size: 15px;
-    font-family: Arial Black;
+    font-family: 'Arial Black';
+    padding-bottom: 10px;
+}
+
+.titles {
+    font-size: 22px;
+    font-family: 'Jaro', Arial;
+    color: #333333;
+}
+
+select {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid #606f92;
+}
+
+.pathContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }

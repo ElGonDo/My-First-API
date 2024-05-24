@@ -8,16 +8,11 @@
     align-items: center;
   }
   .logo {
-    width: 7em;
-    height: 4em;
-    margin-left: 1em;
+    width: 3em;
+    height: 3em;
+    margin: 1em;
   }
   .logo2 {
-    width: 10em;
-    height: 4em;
-  }
-  .logo3 {
-    width: 9em;
-    height: 4em;
-    margin-right: 1em;
+    width: 3em;
+    height: 3em;
   }

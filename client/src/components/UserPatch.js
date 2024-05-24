@@ -55,7 +55,7 @@ const UserPatch = () => {
 
   return (
     <div>
-      <label>
+      <label className='titles'>
         Seleccione un usuario:
         <select onChange={handleSeleccionarUser}>
           <option value="">Seleccione un usuario</option>
@@ -67,7 +67,7 @@ const UserPatch = () => {
         </select>
       </label>
       {userSeleccionado && (
-        <div>
+        <div className='pathContent'>
           <h2>{userSeleccionado.name}</h2>
           <label>
             Nombre:

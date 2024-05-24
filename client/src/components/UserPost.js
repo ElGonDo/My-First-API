@@ -41,7 +41,7 @@ function UserPost() {
 
   return (
     <div className='container'>
-      <h1>Registar Usuario</h1>
+      <h1 className='titles'>Registar Usuario</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Nombre:

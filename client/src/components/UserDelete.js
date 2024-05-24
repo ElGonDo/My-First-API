@@ -32,7 +32,7 @@ const UserDelete = () => {
 
   return (
     <div className='container'>
-      <label>
+      <label className='titles'>
         Seleccione un usuario:
         <select>
           {users.map(user => (

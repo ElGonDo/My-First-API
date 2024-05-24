@@ -7,7 +7,7 @@
 
 .content {
   display: flex;
-  margin-left: 5vh;
+  margin: 0 5vh;
 }
 .post {
   margin-right: 100vh;
